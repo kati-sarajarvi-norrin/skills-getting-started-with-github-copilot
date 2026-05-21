@@ -61,8 +61,9 @@ section h3 {
   margin-bottom: 15px;
   padding: 15px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+  box-shadow: 0 10px 24px rgba(26, 35, 126, 0.08);
 }
 
 .activity-card h4 {
@@ -72,6 +73,65 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #dbe4ff;
+}
+
+.participants-heading {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #1a237e;
+}
+
+.participants-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  color: #334155;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.participant-item span {
+  overflow-wrap: anywhere;
+}
+
+.participant-remove-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #b91c1c;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.participant-remove-btn:hover {
+  background: #ffe4e6;
+  transform: scale(1.06);
+}
+
+.participant-empty {
+  color: #64748b;
+  font-style: italic;
 }
 
 .form-group {
@@ -93,7 +153,7 @@ section h3 {
   font-size: 16px;
 }
 
-button {
+button:not(.participant-remove-btn) {
   background-color: #1a237e;
   color: white;
   border: none;
@@ -104,7 +164,7 @@ button {
   transition: background-color 0.2s;
 }
 
-button:hover {
+button:not(.participant-remove-btn):hover {
   background-color: #3949ab;
 }
 
